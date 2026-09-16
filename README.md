@@ -253,6 +253,6 @@ These statements describe differences in sample means within the supplied datase
 
 ## Jupyter Notebook
 
-To view the complete Python program for Programming Assignment 4, open **ECE2112-PA4.ipynb** in Jupyter Notebook and select **Run All** to execute every cell.
+To view the complete Python program for Programming Assignment 4, open [ECE2112-PA4.ipynb](https://github.com/niamhreesepamilar/ECE-2112-PA-4/blob/main/ECE2112%20-%20PA4.ipynb) in Jupyter Notebook and select **Run All** to execute every cell.
 
 Thank you for reading!
