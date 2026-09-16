@@ -4,7 +4,7 @@
 **Date Submitted: September 16, 2026**
 
 
-This repository contains Programming Assignment 3 for the course **ECE 2112: Advanced Computer Programming and Algorithms**. The assignment, titled **Experiment 3: Python Data Analysis (Pandas)**, consists of three Python problems that apply Pandas DataFrames, CSV file loading, positional slicing, label-based indexing, Boolean indexing, column selection, DataFrame subsetting, and shape checking.
+This repository contains Programming Assignment 4 for the course **ECE 2112: Advanced Computer Programming and Algorithms**. The assignment, titled **Experiment 4: Data Wrangling and Data Visualization**, consists of three Python problems that apply Pandas DataFrames, conditional filtering, column selection, DataFrame subsetting, group-by aggregation, mean calculation, and Matplotlib bar-chart visualization.
 
 
 
@@ -253,6 +253,6 @@ These statements describe differences in sample means within the supplied datase
 
 ## Jupyter Notebook
 
-To view the complete Python program for Programming Assignment 4, open [ECE2112-PA4.ipynb](https://github.com/niamhreesepamilar/ECE-2112-PA-4/blob/main/ECE2112%20-%20PA4.ipynb) in Jupyter Notebook and select **Run All** to execute every cell.
+To view the complete Python program for Programming Assignment 4, open [ECE2112 - PA4.ipynb](https://github.com/niamhreesepamilar/ECE-2112-PA-4/blob/main/ECE2112%20-%20PA4.ipynb) in Jupyter Notebook and select **Run All** to execute every cell.
 
 Thank you for reading!
