@@ -30,6 +30,15 @@ The following operators, functions, and methods were used in this problem:
 - `['Name', 'Gender', 'Math', 'Electronics', 'Average']` - specifies the columns to retain and their order.
 - `len()` - returns the number of rows in the resulting DataFrame.
 
+
+The overall mean was calculated by using:
+
+```python
+overall_mean = df[['Math', 'Electronics', 'GEAS', 'Communication', 'Average']].mean()
+
+overall_mean
+```
+
 The filtering and column selection were performed using:
 
 ```python
@@ -77,6 +86,15 @@ The following functions, methods, and operators were used:
 - `&` - combines the Hometown and Gender conditions using AND.
 - `['Name', 'Track', 'GEAS', 'Electronics', 'Average']` - selects the required columns in the specified order.
 - `>=` - checks whether a numerical value is greater than or equal to a specified threshold.
+
+
+The overall mean was calculated by using:
+
+```python
+overall_mean = df[['Math', 'Electronics', 'GEAS', 'Communication', 'Average']].mean()
+
+overall_mean
+```
 
 The required DataFrame was created using:
 
@@ -131,10 +149,9 @@ The following functions, methods, and operations were used:
 - `plt.figure()` - creates the figure used for the visualizations.
 - `plt.subplot()` - divides the figure into three plotting areas.
 - `plt.bar()` - creates bar charts from category labels and their corresponding mean values.
-- `plt.title()` - gives each chart a descriptive title.
-- `plt.xlabel()` and `plt.ylabel()` - label the horizontal and vertical axes.
-- `plt.xticks()` - adjusts the category labels so they remain readable.
+- `plt.title()` - label the horizontal and vertical axes.
 - `plt.tight_layout()` - automatically adjusts the spacing between the three charts.
+- `fig.text` - adds the text at specific positions within a figure outside the plot area.
 - `plt.show()` - displays the completed figure.
 
 ### Mean Average by Track
@@ -175,28 +192,22 @@ This groups the dataset by Hometown and computes the mean Average for every Home
 The three summary results were visualized in one figure using:
 
 ```python
-plt.figure(figsize=(15, 4))
+fig = plt.figure(figsize=(15, 4))
 
 plt.subplot(1, 3, 1)
-plt.bar(track_mean.index, track_mean.values)
+plt.bar(track_mean.index, track_mean.values, color = '#bdbbec')
 plt.title('Mean Average by Track')
-plt.xlabel('Track')
-plt.ylabel('Mean Average')
-plt.xticks(rotation=20)
 
 plt.subplot(1, 3, 2)
-plt.bar(gender_mean.index, gender_mean.values)
+plt.bar(gender_mean.index, gender_mean.values, color = '#E3C4D8')
 plt.title('Mean Average by Gender')
-plt.xlabel('Gender')
-plt.ylabel('Mean Average')
 
 plt.subplot(1, 3, 3)
-plt.bar(hometown_mean.index, hometown_mean.values)
+plt.bar(hometown_mean.index, hometown_mean.values, color = '#c1e6df')
 plt.title('Mean Average by Hometown')
-plt.xlabel('Hometown')
-plt.ylabel('Mean Average')
 
 plt.tight_layout()
+fig.text(0,-0.2, 'Interpretation\n\n1. Communication has the highest sample mean Average (67.97) in the Track category.\n2. Male has the highest sample mean Average (67.18) in the Gender category.\n3. Luzon has the highest sample mean Average (68.08) in the Hometown category.')
 plt.show()
 ```
 
@@ -207,48 +218,6 @@ The figure contains three separate bar charts:
 - Mean Average by Track
 - Mean Average by Gender
 - Mean Average by Hometown
-
-
-## Average Column Preparation
-
-The assignment requires an `Average` column, while the supplied dataset used for the notebook does not contain one. The notebook therefore creates a copy of the original DataFrame and calculates Average from the four subject scores.
-
-The copy is created using:
-
-```python
-df = board.copy()
-```
-
-The Average column is then calculated using:
-
-```python
-df['Average'] = df[['Math', 'Electronics', 'GEAS', 'Communication']].mean(axis=1)
-```
-
-The expression:
-
-```python
-df[['Math', 'Electronics', 'GEAS', 'Communication']]
-```
-
-selects the four subject-score columns.
-
-The `.mean(axis=1)` operation calculates the mean across the columns for each student. `axis=1` means that the calculation is performed row by row.
-
-The resulting value is stored in the new `Average` column.
-
-Using `board.copy()` before creating the column keeps the original DataFrame unchanged, consistent with the assignment instruction.
-
-
-## Interpretation
-
-The interpretation statements describe the observed dataset only:
-
-1. Among the Track categories, **Communication** has the highest sample mean Average (67.97).
-2. Among the Gender categories, **Male** has the highest sample mean Average (67.18).
-3. Among the Hometown categories, **Luzon** has the highest sample mean Average (68.08).
-
-These statements describe differences in sample means within the supplied dataset. They do not establish that Track, Gender, or Hometown causes a higher board-exam score. The assignment specifically requires the results to be interpreted as observations of the dataset rather than causal conclusions.
 
 
 ## Jupyter Notebook
