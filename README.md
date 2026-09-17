@@ -134,7 +134,7 @@ selects only rows whose Average is at least 60.
 
 ## C. Category-Average Visualization Problem
 
-The third problem examines how the recorded `Average` differs across the categorical features `Track`, `Gender`, and `Hometown`.
+Exaine how the recorded `Average` differs across the three categorical features `Track`, `Gender`, and `Hometown`.
 
 The problem requires:
 1. computing the mean of Average for every category using Pandas;
